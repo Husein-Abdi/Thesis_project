@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary {
+    background-color: #00B0FF;
+}
+/* Navbar Styles */
+.navbar {
+    background-color: #f6fdf3; /* Adjust as needed */
+    padding: 8px 15px; /* Reduced vertical padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px; /* Adjusted height */
+}
+
+.navbar-brand img {
+    height: 30px; /* Adjusted height for smaller logo */
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav a {
+    font-size: 0.9rem; /* Adjusted font size for links */
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f6f6fa; /* Footer background color */
+    color: #000000; /* Footer text color */
+    padding: 5px 0; /* Adjusted padding for smaller height */
+    text-align: center; /* Center-align text */
+    font-size: 0.9rem; /* Adjusted font size for smaller text */
+    line-height: 0.1; /* Adjusted line height for better readability */
+    flex-shrink: 0;
+    height: 70px; /* Adjusted height */
+    margin-top: 100px;
+
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+    font-size: 1rem;
+    flex: 1 0 auto;
+}
+.hero .display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero .lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.text-heading {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 15px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-content a.btn {
+    font-size: 1rem;
+    background-color: #00B0FF;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+form h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="submit"],
+form select {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #00B0FF;
+    color: #fff;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0099cc;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-content a.btn {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        padding: 10px 15px; /* Adjusted padding for better spacing */
+        height: auto; /* Allow navbar height to adjust based on content */
+    }
+
+    .navbar-brand {
+        font-size: 1rem; /* Adjusted font size for better readability */
+        margin-right: 0; /* Optional: Remove margin-right for compactness */
+    }
+
+    .navbar-nav {
+        margin-left: auto; /* Align navbar items to the right */
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end; /* Ensure navbar items are aligned to the right */
+    }
+}
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-content a.btn {
+        font-size: 0.9rem;
+    }
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+
+    .hero-content a.btn {
+        font-size: 0.85rem;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+}

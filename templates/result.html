@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-info" role="alert">
+        <h1>Prediction Result</h1>
+        <p> {{kw}}<p/>
+            <p>{{ kw_prediction }}KW</p>
+            <p>{{ price_prediction }}$</p>       
+            <a class="btn btn-primary" href="/predict">Back to Prediction</a>
+    </div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}Visualize{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-heading">Visualize Yearly Electricity Consumption</h2>
+    <form action="/visualization" method="post">
+        <div class="form-group">
+            <label for="guri_num">Guri Number:</label>
+            <input type="text" class="form-control" id="guri_num" name="guri_num" required>
+        </div>
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="text" class="form-control" id="year" name="year" required>
+        </div>
+        <div class="form-group">
+            <label for="provider">Shirkada:</label>
+            <select class="form-control" id="provider" name="provider" required>
+                <option value="beco">Beco</option>
+                <option value="mogadishu">Mogadishu</option>
+                <option value="bluesky">Bluesky</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Visualize</button>
+    </form>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        {% if error %}
+        toastr.error('{{ error }}', 'Error', {
+            positionClass: 'toast-top-right',
+            closeButton: true,
+            progressBar: true
+        });
+        {% endif %}
+    });
+</script>
+{% endblock %}

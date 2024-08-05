@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1 class="display-4">Welcome to Electricity Consumption Prediction</h1>
+        <p class="lead">Use this application to predict future electricity consumption based on past data.</p>
+        <a class="btn btn-primary btn-lg" href="/predict">Get Started</a>
+    </div>
+    <img src="{{ url_for('static', filename='avatar.png') }}" alt="Logo" class="logo" width="450" height="300">
+</div>
+{% endblock %}

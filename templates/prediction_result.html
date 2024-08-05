@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+        <h1>Electricity Consumption Predictions for {{ year }}</h1>
+        <h3>Provider: {{ provider }}</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Prediction (KW)</th>
+                    <th>Prediction (MW)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in monthly_predictions %}
+                <tr>
+                    <td>{{ prediction.month }}</td>
+                    <td>{{ prediction.yhat }}</td>
+                    <td>{{ prediction.yhat_mw }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <h3>Monthly Predictions Plot</h3>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Monthly Predictions Plot">
+        </div>
+    </div>
+    {% endblock %}
+

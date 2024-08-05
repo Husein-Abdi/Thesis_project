@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Predict{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-heading">Predict Total Energy for a Year</h2>
+    <form action="/predict_year" method="post">
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="number" class="form-control" id="year" name="year" min="2018" max="2030" required>
+        </div>
+        <div class="form-group">
+            <label for="provider">Provider:</label>
+            <select class="form-control" id="provider" name="provider" required>
+                <option value="beco">Beco</option>
+                <option value="mogadishu">Mogadishu</option>
+                <option value="bluesky">Bluesky</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function() {
+        {% if error %}
+        toastr.error('{{ error }}', 'Error', {
+            positionClass: 'toast-top-right',
+            closeButton: true,
+            progressBar: true
+        });
+        {% endif %}
+    });
+</script>
+{% endblock %}

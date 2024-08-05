@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}Visualization Result{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Visualization Result</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <img src="data:image/png;base64,{{ plot_url }}" alt="Visualization" class="img-fluid rounded w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+            <div class="card bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Yearly KW</h5>
+                    <p class="card-text h3">{{ total_yearly_kw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+            <div class="card bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Yearly Price</h5>
+                    <p class="card-text h3">{{ total_yearly_price }} $</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-4 col-sm-12 text-center">
+            <a class="btn btn-primary btn-sm w-75" href="/visualization">Back to Visualization</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
