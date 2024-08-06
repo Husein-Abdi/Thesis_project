@@ -4,10 +4,13 @@
     {
       "src": "app.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": { "maxLambdaSize": "50mb" }
     }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "app.py" }
-  ]
+  ],
+  "env": {
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
 }
