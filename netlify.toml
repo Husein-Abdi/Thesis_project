@@ -1,0 +1,11 @@
+[build]
+  functions = "functions"
+  publish = "public"
+
+[build.environment]
+  AWS_REGION = "us-east-1"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app"
+  status = 200
