@@ -1,6 +1,6 @@
 [build]
-functions = ""
+  functions = "."
 
 [functions]
-# Ensure we use the Python runtime
-python = "3.x"
+  # Optionally specify external dependencies if needed
+  external_node_modules = []
