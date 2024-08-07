@@ -1,0 +1,6 @@
+[build]
+functions = ""
+
+[functions]
+# Ensure we use the Python runtime
+python = "3.x"
