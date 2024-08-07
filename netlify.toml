@@ -2,5 +2,3 @@
   functions = "."
 
 [functions]
-  # Optionally specify external dependencies if needed
-  external_node_modules = []
