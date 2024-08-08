@@ -1,1 +1,4 @@
 .vercel
+models/
+# Ignore the cache directory
+.vercel/cache/
