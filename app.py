@@ -20,7 +20,7 @@ app = Flask(__name__)
 # Function to load the models dynamically
 def load_models():
     models = {}
-    models_folder = 'models'
+    models_folder = 'model'
     
     for filename in os.listdir(models_folder):
         if filename.endswith('.pkl'):
